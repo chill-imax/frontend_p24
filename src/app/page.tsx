@@ -275,7 +275,7 @@ Total: $${total.toFixed(2)}
               <div className="mt-4 text-center">
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className="text-sm text-[(--p24-cyan)] hover:underline"
+                  className="text-sm text-[#1DBAF5] hover:underline"
                 >
                   ✕ Limpiar filtro
                 </button>
@@ -318,8 +318,8 @@ Total: $${total.toFixed(2)}
         </section>
 
         {/* Footer */}
-        <footer className="bg-[(--p24-dark)] text-white py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <footer className="bg-[#121212] text-white py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
             <p className="text-sm text-gray-300">RIF: J-40743028-9</p>
             <p className="text-sm text-gray-400 mt-2">
               © 2026 Papeles 24 C.A. - Tu aliado en oficina y personalización

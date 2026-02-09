@@ -39,7 +39,7 @@ export default function Header({
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
                 placeholder="Busca resmas, cintas, tazas..."
-                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[(--p24-cyan)] focus:border-transparent bg-white transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1DBAF5] focus:border-transparent bg-white transition-all"
               />
             </div>
           </div>
@@ -47,12 +47,12 @@ export default function Header({
           {/* Cart Button */}
           <button
             onClick={onCartClick}
-            className="relative flex items-center gap-2 px-4 py-2.5 bg-cyan-500 text-white rounded-lg hover:bg-[#0098d4] transition-colors"
+            className="relative flex items-center gap-2 px-4 py-2.5 bg-[#1DBAF5] text-white rounded-lg hover:bg-[#0098d4] transition-colors"
           >
             <ShoppingCart className="w-5 h-5" />
             <span className="hidden sm:inline">Mi Pedido</span>
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-magenta-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-semibold">
+              <span className="absolute -top-2 -right-2 bg-[#F21194] text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-semibold">
                 {cartCount}
               </span>
             )}

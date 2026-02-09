@@ -49,12 +49,12 @@ export default function ProductCard({
           {product.name}
         </h3>
         <div className="flex items-center justify-between">
-          <span className="text-2xl text-[(--p24-cyan)]">
+          <span className="text-2xl text-[#1DBAF5]">
             ${product.price.toFixed(2)}
           </span>
           <button
             onClick={() => onAddToCart(product)}
-            className="flex items-center gap-2 px-4 py-2.5 bg-[(--p24-cyan)] text-white rounded-lg hover:bg-[#0098d4] transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 bg-[#1DBAF5] text-white rounded-lg hover:bg-[#0098d4] transition-colors"
           >
             <ShoppingCart className="w-4 h-4" />
             <span className="hidden sm:inline">Añadir</span>

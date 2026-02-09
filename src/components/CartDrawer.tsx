@@ -111,7 +111,7 @@ export default function CartDrawer({
                       <h3 className="text-sm text-[(--p24-dark)] line-clamp-2 mb-2">
                         {item.name}
                       </h3>
-                      <p className="text-lg text-[(--p24-cyan)]">
+                      <p className="text-lg text-[#1DBAF5]">
                         ${item.price.toFixed(2)}
                       </p>
                     </div>
@@ -163,7 +163,7 @@ export default function CartDrawer({
                 </div>
                 <button
                   onClick={onCheckout}
-                  className="w-full py-4 bg-[(--p24-cyan)] text-white rounded-lg hover:bg-[#0098d4] transition-colors text-lg flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-#29b6ee text-white rounded-lg hover:bg-[#0098d4] transition-colors text-lg flex items-center justify-center gap-2"
                 >
                   <span>Finalizar Pedido por WhatsApp</span>
                   <span className="text-xl">💬</span>
