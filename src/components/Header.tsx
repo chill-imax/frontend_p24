@@ -25,8 +25,9 @@ export default function Header({
               src={logo}
               alt="P24 Papeles 24"
               className="h-16 w-auto"
-              width={16}
-              height={16}
+                width={400} // Subimos de 48 a 400 para tener nitidez
+                height={192} // h-48 en Tailwind son 192px
+                quality={90}  // Opcional: aumenta la calidad del 75 (default) al 90
             />
           </div>
 
