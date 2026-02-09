@@ -37,15 +37,17 @@ export default function HeroSection() {
                 src="/img/Taza-lasso.jpg"
                 alt="Taza sublimada"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
-                width={48}
-                height={48}
+                width={400} // Subimos de 48 a 400 para tener nitidez
+                height={192} // h-48 en Tailwind son 192px
+                quality={90}  // Opcional: aumenta la calidad del 75 (default) al 90
               />
               <Image
                 src="https://i.pinimg.com/736x/d0/6f/32/d06f32af486d2b87c7920103638e6bad.jpg"
                 alt="Cintas y mercería"
                 className="w-full h-32 object-cover rounded-lg shadow-md"
-                width={48}
-                height={48}
+                width={400} // Subimos de 48 a 400 para tener nitidez
+                height={192} // h-48 en Tailwind son 192px
+                quality={90}  // Opcional: aumenta la calidad del 75 (default) al 90
               />
             </div>
             <div className="space-y-4 pt-8">
@@ -53,15 +55,17 @@ export default function HeroSection() {
                 src="https://abspapel.com.ve/wp-content/uploads/2024/03/P0137-RESMA-HP-OFICIO.jpg"
                 alt="Resmas de papel"
                 className="w-full h-32 object-cover rounded-lg shadow-md"
-                width={48}
-                height={48}
+                width={400} // Subimos de 48 a 400 para tener nitidez
+                height={192} // h-48 en Tailwind son 192px
+                quality={90}  // Opcional: aumenta la calidad del 75 (default) al 90
               />
               <Image
                 src="https://i.pinimg.com/1200x/e4/5b/80/e45b802366bb43c6da6635e593b5b816.jpg"
                 alt="Papelería"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
-                width={48}
-                height={48}
+                width={400} // Subimos de 48 a 400 para tener nitidez
+                height={192} // h-48 en Tailwind son 192px
+                quality={90}  // Opcional: aumenta la calidad del 75 (default) al 90
               />
             </div>
           </div>
