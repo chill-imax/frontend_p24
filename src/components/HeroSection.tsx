@@ -34,7 +34,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <Image
-                src="https://i.pinimg.com/1200x/90/db/7c/90db7ce14ab9a5bf635dad51d8ca0a3b.jpg"
+                src="/img/Taza-lasso.jpg"
                 alt="Taza sublimada"
                 className="w-full h-48 object-cover rounded-lg shadow-md"
                 width={48}
