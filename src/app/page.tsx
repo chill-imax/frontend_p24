@@ -6,15 +6,17 @@ import HeroSection from "@/components/HeroSection";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard, { Product } from "@/components/ProductCard";
 import CartDrawer, { CartItem } from "@/components/CartDrawer";
+import TopBar from "@/components/top-bar";
 
 const WHATSAPP_NUMBER = "584248613003";
+// 584121632197 Numero P24
 
 const categories = [
   {
     id: "papeleria",
     icon: FileText,
     title: "Papelería",
-    description: "Resmas, libretas y útiles",
+    description: "Resma, libretas y útiles",
   },
   {
     id: "impresiones",
@@ -239,6 +241,9 @@ Total: $${total.toFixed(2)}
 
   return (
     <div className="min-h-screen bg-white">
+      <TopBar
+        
+       />
       <Header
         cartCount={cartCount}
         onCartClick={() => setIsCartOpen(true)}
