@@ -1,0 +1,23 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  description   String?
+  price         Float
+  discountPrice Float?   // Nuevo
+  imageUrl      String
+  category      String
+  inStock       Boolean  @default(true) // Nuevo
+  isOffer       Boolean  @default(false) // Nuevo
+  createdAt     DateTime @default(now())
+}

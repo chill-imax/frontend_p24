@@ -10,6 +10,7 @@
     "deploy": "next build && gh-pages -d out"
   },
   "dependencies": {
+    "@prisma/client": "^6.4.0",
     "@supabase/supabase-js": "^2.96.0",
     "lucide-react": "^0.563.0",
     "motion": "^12.33.0",
@@ -25,6 +26,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "prisma": "^6.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
