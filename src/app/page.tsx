@@ -1,6 +1,6 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
-import { Printer, Coffee, FileText, Scissors, Zap, Tag } from "lucide-react";
+import { Printer, Coffee, FileText, Scissors, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import CategoryCard from "@/components/CategoryCard";
@@ -31,17 +31,20 @@ export default function App() {
   useEffect(() => {
     async function loadProducts() {
       const data = await getProducts();
-      // Mapeamos los datos de Prisma al tipo Product de tu componente
-      const formattedProducts = data.map((p: any) => ({
+      
+      // CORRECCIÓN: Mapeo con tipado estricto para Badge
+      const formattedProducts: Product[] = data.map((p: any) => ({
         id: p.id,
         name: p.name,
         price: p.price,
-        discountPrice: p.discountPrice, // Añadido para ofertas
+        discountPrice: p.discountPrice,
         image: p.imageUrl,
         category: p.category.toLowerCase(),
-        badge: p.isOffer ? "offer" : "stock",
+        // Usamos 'as const' para asegurar que el valor sea del tipo literal esperado
+        badge: p.isOffer ? ("offer" as const) : ("stock" as const),
         inStock: p.inStock
       }));
+      
       setDbProducts(formattedProducts);
     }
     loadProducts();
@@ -120,7 +123,7 @@ export default function App() {
       <main>
         <HeroSection />
 
-        {/* --- NUEVA SECCIÓN: OFERTAS FLASH --- */}
+        {/* --- SECCIÓN DE OFERTAS --- */}
         {offerProducts.length > 0 && !selectedCategory && !searchQuery && (
           <section className="py-12 bg-orange-50/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,9 +189,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* Footer */}
         <footer className="bg-[#121212] text-white py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-sm text-gray-300">RIF: J-40743028-9</p>
             <p className="text-sm text-gray-400 mt-2">© 2026 Papeles 24 C.A. - Tu aliado en oficina y personalización</p>
           </div>
